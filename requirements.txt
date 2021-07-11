@@ -1,0 +1,4 @@
+'chromedriver.exe'
+'discord.py'
+'asyncio'
+'selenium'
