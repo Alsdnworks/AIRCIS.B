@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 from selenium import webdriver 
 import time
@@ -20,6 +21,5 @@ async def 조회(look):
 
 
 
-
     
-client.run('ODYzODI0OTk3MDIxNzc3OTcx.YOshuA.1L8hGK8yaHvBq6Tj9rxcRJmSpKI')
+client.run('os.environ['token'])
