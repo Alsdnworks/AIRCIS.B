@@ -26,4 +26,4 @@ async def 조회(look):   #' *조회'
     print(data)
     await look.send(data)
     browser.quit()
-client.run(os.environ['TOKEN'])
+client.run(os.environ.get['TOKEN'])
