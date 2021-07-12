@@ -7,7 +7,7 @@ client = commands.Bot(command_prefix='*')
 
 @client.command()
 async def 점검(chk):
-    await chk.send('aircisv0.0.3-Debug정상작동중')
+    await chk.send('aircisv0.0.5-Debug정상작동중')
 
 @client.command()
 async def 조회(look):   #' *조회'    
