@@ -4,6 +4,11 @@ from discord.ext import commands
 from selenium import webdriver 
 import time
 client = commands.Bot(command_prefix='*')
+
+@client.command()
+async def 점검(chk):
+    await chk.send('aircisv0.0.3-Debug정상작동중')
+
 @client.command()
 async def 조회(look):   #' *조회'    
     options = webdriver.ChromeOptions()
@@ -21,4 +26,4 @@ async def 조회(look):   #' *조회'
     print(data)
     await look.send(data)
     browser.quit()
-client.run('os.environ['token'])#heroku에서 자동으로 토큰삽입합니다
+client.run(os.environ['TOKEN'])
