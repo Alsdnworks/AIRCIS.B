@@ -1,3 +1,4 @@
+from lib2to3.pgen2 import token
 import pandas as pd
 import discord
 import os
@@ -15,7 +16,7 @@ fpid_except_Filter=('KAL1461')
 acType_except_Filter=('B764')
 acId_except_Filter=('HL7784')
     
-#UBIKAISBOT 관리자 서버관리 프로그램###################################################
+#UBIKAIS 관리자 서버관리 프로그램###################################################
 client = commands.Bot(command_prefix='!')
 @client.event
 async def on_ready():
@@ -73,7 +74,7 @@ def calc(Ubikais):
     search=(Ubikais.split('-')[0])
     Airport=(Ubikais.split('-')[1])
     Date=(Ubikais.split('-')[2])
-    if (search==''|Airport==''|Date==''):
+    if ((search=='') or (Airport=='')or(Date=='')):
         return('https://user-images.githubusercontent.com/79889482/149918194-def70899-4933-40fe-8756-0528aa3de51b.jpg')
 ##################################################################################################################
     if "ARR" in search:
@@ -109,6 +110,8 @@ def calc(Ubikais):
             return result
         else:
             return makelayout(result,'fplYn')
+    else: 
+        return('https://user-images.githubusercontent.com/79889482/149918194-def70899-4933-40fe-8756-0528aa3de51b.jpg')    
 ##################################################################################################################
 
 client.run(token)
